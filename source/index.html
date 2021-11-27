@@ -1,12 +1,166 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
+    <meta charset="UTF-8">
+    <title>Cat Energy, функциональное питание для котов</title>
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
-
+  <body class="page__body">
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="../img/logo-mobile.svg" width="33" height="38" alt="Иконка Cat Energy в виде жизнерадостного неизвестного зверя">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a>
+                Главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="#"> <!--Изменить ссылку с появлением соответствующей страницы-->
+                Каталог продукции
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="#"> <!--Изменить ссылку с появлением соответствующей страницы-->
+                Подбор программы
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1>Функциональное питание для котов</h1>
+      <h2>Занялся собой? Займись котом!</h2>
+      <a href="#">Подобрать программу</a>
+      <!--В дальнейшем это станет ссылкой с визуальным закосом под кнопку, ведущей на страницу подбора программы-->
+      <!--Не уверена, какой ей нужен класс по БЭМу-->
+      <section class="programm-options">
+        <div class="programm-options__wrapper">
+          <h2 class="visually-hidden">Варианты программы</h2>
+          <ul class="programm-options__list">
+            <li class="programm-options__item">
+              <!--Декоративная(?) картинка с котом, ничего про неё не вижу в стайлгайде-->
+              <h3 class="programm-options__title">Похудение</h3>
+              <p class="programm-options__description">Ваш кот весит больше собаки и<br>почти утратил способность лазить<br>по деревьям? Пора на диету! Cat<br>Energy Slim поможет вашему<br>питомцу сбросить лишний вес.</p>
+              <a class="programm-options__link" href="#"><!--Ссылка на якорь формы?-->
+                Каталог Slim <!--Рядом спрайт стрелки, пока не пойму, как их делать, и как им менять длину-->
+              </a>
+            </li>
+            <li class="programm-options__item">
+              <!--Декоративная(?) картинка с котом, ничего про неё не вижу в стайлгайде-->
+              <h3 class="programm-options__title">Набор массы</h3>
+              <p class="programm-options__description">Заработать авторитет среди<br>дворовых котов и даже собак?<br>Серия Cat Energy Pro поможет<br>вашему коту нарастить<br>необходимые мышцы!</p>
+              <a class="programm-options__link" href="#"><!--Ссылка на якорь формы?-->
+                Каталог Pro <!--Рядом спрайт стрелки, пока не пойму, как их делать, и как им менять длину-->
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="explanation">
+        <h2 class="explanation__title">Как это работает</h2>
+        <ul class="explanation__list">
+          <li class="explanation-item">
+            <!--Предположительно декоративная картинка-->
+            <p class="explanation__description">Функциональное питание<br>содержит только полезные<br>питательные вещества.</p>
+          </li>
+          <li class="explanation-item">
+            <!--Предположительно декоративная картинка-->
+            <p class="explanation__description">Выпускается в виде порошка,<br>который нужно лишь залить<br>кипятком и готово.</p>
+          </li>
+          <li class="explanation-item">
+            <!--Предположительно декоративная картинка-->
+            <p class="explanation__description">Замените один-два приема<br>обычной еды на наше<br>функциональное питание.</p>
+          </li>
+          <li class="explanation-item">
+            <!--Предположительно декоративная картинка-->
+            <p class="explanation__description">Уже через месяц<br>наслаждайтесь изменениями<br>к лучшему вашего питомца!</p>
+          </li>
+        </ul>
+      </section>
+      <section class="example">
+        <div class="example__wrapper">
+          <h2 class="example__title">Живой пример</h2>
+          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто<br>заменив свой обычный корм на Cat Energy<br>Slim. Отличный результат без изнуряющих<br>тренировок! При этом он не менял своих<br>привычек и по-прежнему спит по 16 часов<br>в день. </p>
+          <div class="example__stats stats">
+            <dl class="stats__list">
+              <div class="stats__item">
+                <dt class="stats_number">5 кг</dt>
+                <dd class="stats__description">снижение<br>веса</dd>
+              </div>
+              <div class="stats__item">
+                <dt class="stats_number">60 дней</dt>
+                <dd class="stats__description">затрачено<br>времени</dd>
+              </div>
+            </dl>
+          </div>
+          <p class="example__costs">Затраты на питание: 15 000 руб.</p>
+        </div>
+        <div class="changes slider">
+          <ul class="changes__list slider__list">
+            <li class="changes__item before slider__item">
+              <img class="before__img" src="../img/before.png" width="280" height="232" alt="Изображение пухлого кота">
+            </li>
+            <li class="changes__item after visually-hidden slider__item" hidden>
+              <img class="after__img" src="#" width="280" height="232" alt="Изображение похудевшего кота">
+            </li>
+          </ul>
+          <p class="slider__toggle">
+            <!--Тут будет бегунок на Css-->
+            <span>Было</span>
+            <div class="slider__range">
+              <button class="slider__button" type="button"></button>
+            </div>
+            <span>Стало</span>
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <section class="page-footer__invitation invitation">
+        <h2 class="invitation__title visually-hidden" hidden>Приглашаем к сотрудничеству!</h2>
+        <div class="invitation__main">
+          <p class="invitation__description">приглашаем<br>к сотрудничеству<br>дилеров!</p>
+          <p class="invitation__address">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</p>
+        </div>
+        <div class="invitation__map">
+          <img class="map__mobile" src="../img/map_mobile.jpg" width="320" height="362" alt="Карта проезда к фирме мобильная версия">
+        </div>
+      </section>
+      <section class="page-footer__social social">
+        <h2 class="social__title visually-hidden" hidden>Давайте дружить!</h2>
+        <a class="social__link">
+          <!--Спрайт svg?-->
+          CAT ENERGY
+        </a>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__button vk" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Вконтакте</span>
+              <!--svg иконка-->
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__button instagram" href="https://www.instagram.com/htmlacademy/">
+              <span class="visually-hidden">instagram</span>
+              <!--svg иконка-->
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__button facebook" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">facebook</span>
+              <!--svg иконка-->
+            </a>
+          </li>
+        </ul>
+        <a class="social_htmlacademy" href="#"> <!--Не знаю, зачем эта ссылка-->
+          <img src="../img/html academy.png" width="27" height="34" alt="Логотип htmlacademy">
+        </a>
+      </section>
+    </footer>
   </body>
 </html>
