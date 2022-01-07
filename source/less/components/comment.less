@@ -1,0 +1,40 @@
+.comment {
+  border-color: transparent;
+  margin: 0;
+  padding: 0;
+
+  &__title {
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 37px;
+    margin-top: 24px;
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    line-height: 26px;
+    color: #000000;
+  }
+
+  &__title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    height: 2px;
+    background: #68B738;
+    width: 158px;
+    left: 140px;
+  }
+
+  &__area {
+    border: 1px solid #e7e7e7;
+    width: 280px;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-top: 9px;
+    text-transform: uppercase;
+    color: #444444;
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
