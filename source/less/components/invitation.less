@@ -1,27 +1,35 @@
-.invitation {
-  margin-bottom: 39px;
 
-  &__main {
-    display: flex;
-    padding: 26px 20px;
+.invitation__main {
+  background-color: @base-white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &--gray {
+    background-color: @base-gray;
+    margin-left: 0;
+    margin-right: 0;
   }
+}
 
-  &__description {
-    text-transform: uppercase;
-    font-family: "Oswald", sans-serif;
-    font-size: 16px;
-    line-height: 20px;
-    color: #111111;
-  }
+.invitation__description {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  color: @light-black;
+}
 
-  &__address {
-    font-family: "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    color: #444444;
-  }
+.invitation__address {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: @dark-gray;
+}
 
-  &--grey {
-    background-color: #f2f2f2;
+.invitation__map {
+  img {
+  width: 100%;
   }
 }

@@ -1,52 +1,30 @@
-.programm-options {
-  padding-left: 20px;
-  padding-right: 20px;
+.programm-options__item {
+  margin: 0;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-bottom: 20px;
+  background-color: @base-gray;
+  padding-top: 30px;
+  padding-bottom: 22px;
+}
 
-  &__title {
-    text-transform: uppercase;
-    font-size: 24px;
-    line-height: 37px;
-    margin: 0;
-    padding: 0;
-    margin-top: 10px;
-    padding-left: 69px;
-  }
+.programm-options__title {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 29px;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+}
 
-  &__title--another {
-    padding-left: 59px;
-  }
+.programm-options__description {
+  margin-left: 20px;
+  margin-right: 33px;
+}
 
-  &__item {
-    margin-bottom: 20px;
-    background: url("../img/cat_back.png") no-repeat 20px 20px #f2f2f2;
-    padding: 21px 33px 22px 20px;
-  }
-
-  &__item--another {
-    background: url("../img/cat_walk.png") no-repeat 0 30px #f2f2f2;
-  }
-
-  &__description {
-    font-size: 14px;
-    line-height: 18px;
-    color: #444444;
-    font-family: "Arial", sans-serif;
-  }
-
-  &__link {
-    color: #000000;
-    text-transform: uppercase;
-    font-size: 16px;
-    line-height: 16px;
-  }
-
-  &__link::before {
-    content: "";
-    width: 240px;
-    display: block;
-    height: 1px;
-    background: #d9d9d9;
-    margin-bottom: 19px;
-  }
+.programm-options__link {
+  margin-left: 20px;
+  text-transform: uppercase;
+  line-height: 16px;
+  color: @base-black;
 }

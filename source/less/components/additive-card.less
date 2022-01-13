@@ -1,38 +1,28 @@
 .additive-card {
-  margin: 0;
-  padding: 0;
-  margin-left: 20px;
-  margin-bottom: 31px;
+  padding: 13px 20px 29px 20px;
+}
 
-  &__header {
-    text-transform: uppercase;
-    font-family: "Oswald", sans-serif;
-    font-size: 16px;
-    line-height: 16px;
-    color: #222222;
-    margin-bottom: 13px;
-  }
+.additive-card__header {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+  color: @special-gray;
+  margin-bottom: 13px;
+  font-weight: 400;
+}
 
-  &__variable {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-  }
+.additive-card__variable {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 
-  &__variable b,
-  &__variable span {
-    color: #444444;
+  & b,
+  & span {
+    color: @dark-gray;
     font-family: "Arial", sans-serif;
     font-size: 14px;
     line-height: 14px;
     font-weight: 400;
   }
-
-  &::after {
-    content: "";
-    width: 280px;
-    display: block;
-    height: 1px;
-    background: #d9d9d9;
-  }
 }
+

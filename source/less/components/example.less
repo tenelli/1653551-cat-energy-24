@@ -1,17 +1,18 @@
 .example {
-  background-color: #eaeaea;
-  padding: 25px 20px 40px 20px;
+  background-color: @bg-gray;
+  padding: 20px 20px 40px 20px;
+}
 
-  &__title {
-    margin: 0;
-    padding: 0;
-    font-size: 36px;
-  }
+.example__title {
+  font-weight: normal; /*тут 400px по неведомой причине не срабатывает*/
+  font-size: 36px;
+  line-height: 40px;
+  margin-bottom: 40px;
+}
 
-  &__description {
-    font-family: "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-    color: #444444;
-  }
+.example__costs {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
 }

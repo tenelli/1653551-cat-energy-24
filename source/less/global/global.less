@@ -1,7 +1,10 @@
 body {
   margin: 0;
-  background-color: @base-bg-color;
-  max-width: 320px;
+  background-color: @base-white;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: @base-black;
 }
 
 img {
@@ -9,15 +12,12 @@ img {
   height: auto;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
+.clear-list {
+  list-style: none;
+  margin: 0;
   padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+}
+
+.clear-underline {
+  text-decoration: none;
 }
