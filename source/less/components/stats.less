@@ -1,6 +1,18 @@
 .stats {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: @desktop-width) { /*тут не становится*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 0;
+  }
 }
 
 .stats__item {
@@ -8,9 +20,19 @@
   flex-direction: column;
   align-items: center;
 
+
+  @media (min-width: @tablet-width) {
+    margin-right: 42px;
+  }
+
   b {
     text-transform: uppercase;
     font-weight: normal;
+
+    @media (min-width: @tablet-width) {
+      font-size: 30px;
+      line-height: 37px;
+    }
   }
 
   span {
@@ -18,5 +40,10 @@
     font-size: 12px;
     line-height: 12px;
     color: @dark-gray;
+
+    @media (min-width: @tablet-width) {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 }

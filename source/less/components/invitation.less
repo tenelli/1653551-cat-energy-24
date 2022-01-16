@@ -4,8 +4,21 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px 26px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 70px 56px 70px;
+  }
+
+  @media (min-width: @desktop-width) { /* position: absolute, вероятно */
+    width: 565px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 80px 56px 80px;
+  }
 
   &--gray {
     background-color: @base-gray;
@@ -19,6 +32,13 @@
   font-size: 16px;
   line-height: 20px;
   color: @light-black;
+
+  @media(min-width: @tablet-width) {
+    width: 170px;
+    color: @light-black;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .invitation__address {
@@ -26,6 +46,12 @@
   font-size: 14px;
   line-height: 20px;
   color: @dark-gray;
+
+  @media(min-width: @tablet-width) { /*в этом тексте ещё по макету должна быть пустая строка*/
+    font-size: 16px;
+    width: 150px;
+    text-align: right ;
+  }
 }
 
 .invitation__map {

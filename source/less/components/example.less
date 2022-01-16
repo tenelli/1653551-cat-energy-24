@@ -1,6 +1,21 @@
 .example {
   background-color: @bg-gray;
-  padding: 20px 20px 40px 20px;
+  padding-top: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    background-color: @special-white;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @bg-gray;
+    padding-left: 70px;
+    padding-right: 117px;
+  }
 }
 
 .example__title {
@@ -8,6 +23,16 @@
   font-size: 36px;
   line-height: 40px;
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 146px;
+  }
 }
 
 .example__costs {
@@ -15,4 +40,37 @@
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    font-size: 20px;
+    line-height: 20px;
+    width: 170px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.example__description {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: @dark-gray;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    width: 700px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 436px;
+    margin-bottom: 69px;
+  }
 }
