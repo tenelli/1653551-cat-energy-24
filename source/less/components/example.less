@@ -1,20 +1,17 @@
 .example {
   background-color: @bg-gray;
   padding-top: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     background-color: @special-white;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-top: 43px;
+    padding-bottom: 62px;
   }
 
   @media (min-width: @desktop-width) {
     background-color: @bg-gray;
-    padding-left: 70px;
-    padding-right: 117px;
+    padding-bottom: 75px;
   }
 }
 
@@ -32,26 +29,6 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 146px;
-  }
-}
-
-.example__costs {
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: center;
-
-  @media (min-width: @tablet-width) {
-    margin-left: auto;
-    font-size: 20px;
-    line-height: 20px;
-    width: 170px;
-  }
-
-  @media (min-width: @tablet-width) {
-    margin-left: 0;
-    font-size: 20px;
-    line-height: 20px;
   }
 }
 

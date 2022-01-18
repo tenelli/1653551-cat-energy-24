@@ -2,16 +2,24 @@
   background-color: @base-gray;
 }
 
-.page-footer__wrapper {
+.page-footer__container {
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    padding: 60px 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
-    padding: 62px 110px;
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+}
+
+.page-footer__social {
+  @media (min-width: @tablet-width) {
+    align-self: center;
   }
 }

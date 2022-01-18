@@ -1,3 +1,15 @@
+.promo__cat-background {
+  background-color: @base-green;
+  background-image: url("../img/index_green_cat.jpg");
+  background-repeat: no-repeat;
+  padding-top: 27px;
+  background-size: contain;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
+}
+
 .promo__header {
   color: #ffffff;
   text-align: center;
@@ -11,7 +23,7 @@
     font-size: 60px;
     line-height: 60px;
     text-align: left;
-    margin-left: 117px;
+    margin-left: 87px;
     margin-bottom: 41px;
   }
 
@@ -20,7 +32,7 @@
     font-size: 60px;
     line-height: 60px;
     text-align: left;
-    margin-left: 190px;
+    margin-left: 80px;
     margin-bottom: 41px;
   }
 }
@@ -36,43 +48,19 @@
   @media (min-width: @tablet-width) {
     color: @base-black;
     text-align: left;
-    margin-left: 117px;
+    margin-left: 87px;
     font-size: 20px;
     line-height: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 49px;
   }
 
   @media (min-width: @desktop-width) {
     color: @base-black;
     text-align: left;
-    margin-left: 190px;
+    margin-left: 80px;
     font-size: 20px;
     line-height: 20px;
     margin-bottom: 52px;
-  }
-}
-
-.promo__cat-background {
-  background-color: #68b738;
-  padding-top: 27px;
-  padding-bottom: 164px;
-  background-image: url("../img/index_green_cat.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-
-  @media (min-width: @tablet-width) {
-    background: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    background-color: #68b738;
-    padding-top: 27px;
-    padding-bottom: 164px;
-    background-image: url("../img/index_green_cat.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
   }
 }
 
@@ -80,11 +68,20 @@
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 120px;
+    text-align: left;
+    margin-left: 87px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 190px;
+    margin-left: 80px;
     margin-bottom: 267px;
+  }
+}
+
+
+.promo__image {
+  @media (min-width: @tablet-width) { /*временно скрываю*/
+    display: none;
+    order: 2;
   }
 }

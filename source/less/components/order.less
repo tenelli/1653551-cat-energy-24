@@ -4,18 +4,34 @@
   line-height: 36px;
   margin-top: 27px;
   margin-bottom: 37px;
-  margin-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .order__text {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
-  margin-left: 20px;
+  width: 226px;
+  margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    width: 323px;
+    margin-bottom: 66px;
+  }
 }
 
 .order__catdata {
-  margin-top: 39px;
   border: none;
   display: flex;
   flex-direction: column;
@@ -30,12 +46,20 @@
   border: none;
   display: flex;
   flex-direction: column;
-  margin-top: 46px;
-  margin-bottom: 45px;
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid @special-border;
+    box-sizing: border-box;
+    margin-left: -10px;
+  }
 }
 
 .order__choice {
   margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: -40px;
+  }
 }
 
 .order__comments {
@@ -49,8 +73,20 @@
   margin-bottom: 23px;
 }
 
+.order__contacts-wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 78px;
+  }
+}
+
 .order__contacts-title {
   margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .order__additional {
@@ -62,10 +98,24 @@
 
 .order__additional-title {
   margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .order__button {
   margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    width: 282px;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    margin-bottom: 82px;
+  }
 }
 
 .order__required {
@@ -74,4 +124,41 @@
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
+}
+
+.order__pet {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 69px;
+  }
+}
+
+.order__additional-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.order__sending-data {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }

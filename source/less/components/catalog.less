@@ -1,10 +1,21 @@
 .catalog__title {
   margin-top: 27px;
-  margin-left: 20px;
   margin-bottom: 41px;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.catalog__special-card {
+  @media (min-width: @tablet-width) {
+    border: 2px solid @base-gray;
+    box-sizing: border-box;
+  }
 }
 
 .catalog__see-more {
@@ -16,6 +27,16 @@
   line-height: 20px;
   color: @light-black;
   margin-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 134px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 23px;
+  }
 }
 
 .catalog__description-more {
@@ -25,8 +46,57 @@
   text-align: center;
   color: @dark-gray;
   margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    width: 167px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .catalog__button-all {
-  margin-bottom: 50px;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    width: 248px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 168px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.catalog__item {
+  @media (max-width: @mobile-width-only) {
+    border-top: 1px solid @another-border; /*в раздумьях, как это вменяемо растянуть на всю ширину*/
+  }
+}
+
+.catalog__goods {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 141px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 143px;
+  }
+}
+
+.catalog-addpresent {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 80px;
+  }
 }
