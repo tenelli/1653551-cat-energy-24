@@ -1,17 +1,11 @@
 .example {
-  background-color: @bg-gray;
+  background-color: @base-gray;
   padding-top: 25px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    background-color: @special-white;
+    background: linear-gradient(to bottom, @special-white 50%, @bg-gray 50%);
     padding-top: 43px;
-    padding-bottom: 62px;
-  }
-
-  @media (min-width: @desktop-width) {
-    background-color: @bg-gray;
-    padding-bottom: 75px;
   }
 }
 
@@ -49,5 +43,32 @@
   @media (min-width: @desktop-width) {
     width: 436px;
     margin-bottom: 69px;
+  }
+}
+
+.example__container {
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 1220px;
+    padding: 0 110px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.example__bg-wrapper {
+  padding: 40px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 70px;
+    background-color: @base-gray;
+    padding-bottom: 75px;
+  }
+}
+
+
+.example__stats {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 200px;
   }
 }

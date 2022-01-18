@@ -93,37 +93,45 @@
           </div>
         </section>
         <section class="promo-example example">
-          <div class="example__container container">
+          <div class="container">
             <h2 class="example__title">Живой пример</h2>
-            <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-            <div class="example__stats stats">
-              <div class="stats__changes">
-                <p class="stats__item">
-                  <b>5 кг</b>
-                  <span>снижение веса</span>
-                </p>
-                <p class="stats__item">
-                  <b>60 дней</b>
-                  <span>затрачено времени</span>
-                </p>
-              </div>
-              <p class="stats__costs">Затраты на питание: 15 000 руб.</p>
-            </div>
           </div>
-          <div class="changes slider container">
-            <div class="changes__item before slider__item">
-              <img class="before__img" src="img/before.png" width="280" height="232" alt="Изображение пухлого кота">
-            </div>
-            <div class="changes__item after visually-hidden slider__item">
-              <img class="after__img" src="#" width="280" height="232" alt="Изображение похудевшего кота">
-            </div>
-            <div class="slider__toggle">
-              <!--Тут будет бегунок на Css-->
-              <button class="slider__switch slider__switch_before" type="button">Было</button>
-              <div class="slider__range">
-                <button class="slider__button" type="button"></button>
+          <div class="example__bg-wrapper">
+            <div class="example__container">
+              <div class="example__info-block">
+                <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+                <div class="example__stats stats">
+                    <div class="stats__changes">
+                      <p class="stats__item">
+                        <b>5 кг</b>
+                        <span>снижение веса</span>
+                      </p>
+                      <p class="stats__item">
+                        <b>60 дней</b>
+                        <span>затрачено времени</span>
+                      </p>
+                    </div>
+                    <p class="stats__costs">Затраты на питание: 15 000 руб.</p>
+                </div>
               </div>
-              <button class="slider__switch slider__switch_after" type="button">Стало</button>
+              <div class="changes slider">
+                <div class="changes__bg-wrapper">
+                  <div class="changes__item before slider__item">
+                    <img class="before__img changes__img" src="img/before.png" width="280" height="232" alt="Изображение пухлого кота">
+                  </div>
+                  <div class="changes__item after visually-hidden slider__item">
+                    <img class="after__img" src="#" width="280" height="232" alt="Изображение похудевшего кота">
+                  </div>
+                  <div class="slider__toggle">
+                    <!--Тут будет бегунок на Css-->
+                    <button class="slider__switch slider__switch_before" type="button">Было</button>
+                    <div class="slider__range visually-hidden">
+                      <button class="slider__button" type="button"></button>
+                    </div>
+                    <button class="slider__switch slider__switch_after" type="button">Стало</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
