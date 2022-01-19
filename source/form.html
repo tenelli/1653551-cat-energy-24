@@ -8,10 +8,10 @@
 </head>
 <body class="page__body">
   <header class="page-header">
-    <div class="page-header__container container">
+    <div class="page-header__container">
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <div class="main-nav__moving">
-          <a class="main-nav__logo-link">
+          <a class="main-nav__logo-link" href="index.html">
             <img class="main-nav__picture" src="img/logo-mobile.svg" width="33" height="38" alt="Иконка Cat Energy в виде жизнерадостного неизвестного зверя">
             <img class="main-nav__text-picture" src="img/text-logo.svg" width="101" height="18" alt="Текстовый логотип Cat Energy"><!--не знаю, как лучше всего центрировать, абсолютной позицией?-->
           </a>
@@ -22,13 +22,13 @@
           </p>
         </div>
         <ul class="main-nav__list site-list clear-list">
-          <li class="site-list__item">
+          <li class="main-nav__list-item site-list__item">
             <a  href="index.html">Главная</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__list-item site-list__item">
             <a href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__list-item site-list__item">
             <a>Подбор программы</a>
           </li>
         </ul>
@@ -37,18 +37,18 @@
   </header>
   <main class="page-main">
     <section class="order">
-      <div class="container--form order__container">
+      <div class="container order__container">
         <h1 class="order__title">Подбор программы</h1>
         <p class="order__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="order__form" action="https://echo.htmlacademy.ru/" method="get">
           <div class="order__pet">
             <fieldset class="order__catdata">
               <legend class="visually-hidden">Данные питомца:</legend>
-              <label class="input-text" for="pet-name">
+              <label class="input-text order__label" for="pet-name">
                 <span>Имя:*</span>
                 <input type="text" id="pet-name" name="pet-name" placeholder="Барсик" required>
               </label>
-              <label class="input-text" for="pet-weight">
+              <label class="input-text order__label" for="pet-weight">
                 <span>Вес (кг):*</span>
                 <input type="text" id="pet-weight" name="pet-weight" placeholder="7" required>
               </label>
@@ -76,11 +76,11 @@
           <fieldset class="order__contacts">
             <legend class="order__contacts-title title-line">Контактные данные (владельца кота)</legend>
             <div class="order__contacts-wrapper">
-              <label class="input-text input-text--email">
+              <label class="input-text input-text--email order__contacts-label">
                 <span>E-mail:*</span>
                 <input type="email" name="e-mail" required placeholder="kuklachev@gmail.com">
               </label>
-              <label class="input-text input-text--phone">
+              <label class="input-text input-text--phone order__contacts-label">
                 <span>Телефон:*</span>
                 <input type="tel" name="phone" required placeholder="8 (960) 900-60-90">
               </label>
@@ -126,7 +126,7 @@
       <div class="invitation__container container">
         <div class="invitation__main">
           <p class="invitation__description">приглашаем к сотрудничеству дилеров!</p>
-          <p class="invitation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <p class="invitation__address">ул. Большая Конюшенная, д. 19/8 <span class="invitation__city">Санкт-Петербург</span></p>
         </div>
       </div>
       <div class="invitation__map">
@@ -174,21 +174,5 @@
       </section>
     </div>
   </footer>
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-  </script>
 </body>
 </html>

@@ -14,7 +14,7 @@
   img {
     display: block;
     width: 100%;
-    padding: 0;
+    max-width: 100%;
   }
 }
 
@@ -28,11 +28,9 @@
     justify-content: space-between;
   }
 
-  @media (min-width: @desktop-width) { /* position: absolute, вероятно */
+  @media (min-width: @desktop-width) {
     width: 565px;
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
     padding: 60px 80px 56px 80px;
   }
 }
@@ -45,7 +43,6 @@
 
   @media (min-width: @tablet-width) {
     width: 170px;
-    color: @light-black;
     font-size: 20px;
     line-height: 26px;
   }
@@ -59,7 +56,14 @@
 
   @media (min-width: @tablet-width) { /*в этом тексте ещё по макету должна быть пустая строка*/
     font-size: 16px;
-    width: 150px;
+    width: 160px;
     text-align: right;
+  }
+}
+
+.invitation__city {
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-top: 19px;
   }
 }
