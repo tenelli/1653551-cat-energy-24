@@ -1,6 +1,12 @@
 .example {
-  background-color: @bg-gray;
-  padding: 20px 20px 40px 20px;
+  background-color: @base-gray;
+  padding-top: 25px;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    background: linear-gradient(to bottom, @base-white 50%, @bg-gray 50%);
+    padding-top: 43px;
+  }
 }
 
 .example__title {
@@ -8,11 +14,61 @@
   font-size: 36px;
   line-height: 40px;
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 146px;
+  }
 }
 
-.example__costs {
-  text-transform: uppercase;
+.example__description {
+  font-family: "Arial", sans-serif;
   font-size: 14px;
-  line-height: 20px;
-  text-align: center;
+  line-height: 18px;
+  color: @dark-gray;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    width: 700px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 436px;
+    margin-bottom: 69px;
+  }
+}
+
+.example__container {
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 1220px;
+    padding: 0 110px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.example__bg-wrapper {
+  padding: 40px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 70px;
+    background-color: @base-gray;
+    padding-bottom: 75px;
+  }
+}
+
+
+.example__stats {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 200px;
+  }
 }

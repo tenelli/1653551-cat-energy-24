@@ -1,3 +1,28 @@
 .page-footer {
   background-color: @base-gray;
 }
+
+.page-footer__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+}
+
+.page-footer__social {
+  @media (min-width: @tablet-width) {
+    align-self: center;
+  }
+}
+
+.page-footer__about {
+  margin-top: 32px;
+  margin-bottom: 39px;
+}

@@ -4,21 +4,43 @@
   line-height: 36px;
   margin-top: 27px;
   margin-bottom: 37px;
-  margin-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .order__text {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
-  margin-left: 20px;
+  width: 226px;
+  margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    width: 323px;
+    margin-bottom: 66px;
+  }
 }
 
 .order__catdata {
-  margin-top: 39px;
   border: none;
   display: flex;
   flex-direction: column;
+  margin-bottom: 46px;
+  padding: 0; /*положила страницу в стандартный контейнер, пообнуляла паддинги филдсетам. Можно ли будет сделать у бэм-элементов маргины слева при подгонке планшетной версии по макету?*/
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+  }
 }
 
 .order__form {
@@ -30,11 +52,19 @@
   border: none;
   display: flex;
   flex-direction: column;
-  margin-top: 46px;
   margin-bottom: 45px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid @special-border;
+    box-sizing: border-box;
+    margin-bottom: 75px;
+    padding: 25px 27px;
+  }
 }
 
 .order__choice {
+  display: block;
   margin-bottom: 13px;
 }
 
@@ -42,15 +72,41 @@
   margin-right: 20px;
   border: none;
   margin-bottom: 22px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 67px;
+  }
 }
 
 .order__contacts {
   border: none;
   margin-bottom: 23px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+  }
+}
+
+.order__contacts-wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 78px;
+  }
 }
 
 .order__contacts-title {
   margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .order__additional {
@@ -58,14 +114,29 @@
   flex-direction: column;
   border: none;
   margin-bottom: 34px;
+  padding: 0;
 }
 
 .order__additional-title {
   margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .order__button {
   margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    width: 282px;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    margin-bottom: 82px;
+  }
 }
 
 .order__required {
@@ -74,4 +145,59 @@
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
+}
+
+.order__pet {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 69px;
+  }
+}
+
+.order__additional-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.order__sending-data {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.order__label {
+  margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.order__contacts-label {
+  &:first-of-type {
+    margin-bottom: 14px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+    }
+  }
 }

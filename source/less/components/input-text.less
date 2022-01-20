@@ -1,6 +1,5 @@
 .input-text {
   display: flex;
-  margin: 14px 0;
 
   span {
     text-transform: uppercase;
@@ -8,6 +7,11 @@
     margin-right: 12px;
     color: @dark-gray;
     align-self: center;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   input {

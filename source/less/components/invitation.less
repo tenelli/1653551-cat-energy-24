@@ -1,16 +1,37 @@
-
-.invitation__main {
+.invitation {
   background-color: @base-white;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
 
   &--gray {
     background-color: @base-gray;
-    margin-left: 0;
-    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: none;
+  }
+}
+
+.invitation__map {
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.invitation__main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 565px;
+    box-sizing: border-box;
+    padding: 60px 80px 56px 80px;
   }
 }
 
@@ -19,6 +40,12 @@
   font-size: 16px;
   line-height: 20px;
   color: @light-black;
+
+  @media (min-width: @tablet-width) {
+    width: 170px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .invitation__address {
@@ -26,10 +53,17 @@
   font-size: 14px;
   line-height: 20px;
   color: @dark-gray;
+
+  @media (min-width: @tablet-width) { /*в этом тексте ещё по макету должна быть пустая строка*/
+    font-size: 16px;
+    width: 160px;
+    text-align: right;
+  }
 }
 
-.invitation__map {
-  img {
-    width: 100%;
+.invitation__city {
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-top: 19px;
   }
 }
