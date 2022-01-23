@@ -2,16 +2,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin-right: 42px;
     align-items: flex-start;
   }
 
+  @media (min-width: @desktop-width) {
+    align-items: center;
+  }
+
   b {
     text-transform: uppercase;
     font-weight: normal;
+    border: 1px solid @border-gray;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 14px 42px 17px 42px;
 
     @media (min-width: @tablet-width) {
       font-size: 30px;
@@ -20,14 +28,28 @@
   }
 
   span {
+    background-color: @bg-gray;
     font-family: "Arial", sans-serif;
     font-size: 12px;
     line-height: 12px;
     color: @dark-gray;
+    z-index: 2;
+    padding: 4px;
+    position: absolute;
+    top: 45px;
+    width: 77px;
+    text-align: center;
+
 
     @media (min-width: @tablet-width) {
-      font-size: 24px;
-      line-height: 24px;
+      background: @base-white;
+      width: 140px;
+      top: 60px;
+      left: 10px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background: @bg-gray;
     }
   }
 }
@@ -43,9 +65,9 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
-    width: 240px;
+    width: 180px;
     text-align: right;
-    margin-left: 167px;
+    margin-left: auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -72,5 +94,25 @@
 
   @media (min-width: @desktop-width) {
     justify-content: flex-start;
+  }
+}
+
+.stats__span {
+  @media (min-width: @desktop-width) {
+    margin-right: 63px;
+  }
+}
+
+.stats__weight {
+  @media (min-width: @tablet-width) {
+    width: 150px;
+    padding: 15px 57px 20px 57px;
+  }
+}
+
+.stats__days {
+  @media (min-width: @tablet-width) {
+    width: 190px;
+    padding: 15px 30px 20px 30px;
   }
 }

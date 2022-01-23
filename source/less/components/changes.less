@@ -1,13 +1,8 @@
-.changes {
-  @media (min-width: @tablet-width) {
-    position: relative;
-  }
-}
-
 .changes__bg-wrapper {
   @media (min-width: @tablet-width) {
     padding-top: 370px;
     padding-bottom: 61px;
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
@@ -15,23 +10,46 @@
   }
 }
 
-.changes__img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 15px;
-
+.changes__cat { /*да, я вижу, что кот несколько кукожится вширь, но не нашла, почему. Как и причину гигантского отступа*/
   @media (min-width: @tablet-width) {
+    display: flex;
     position: absolute;
     width: 592px;
-    height: 511px;
+    height: 100%;
     top: -250px;
     left: 120px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 592px;
-    height: 511px;
     left: 50px;
+  }
+}
+
+.changes__item {
+  @media (min-width: @tablet-width) {
+    height: 511px;
+    overflow: hidden;
+    width: 50%;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 0;
+      height: 100%;
+    }
+
+    &--before img {
+      left: 52%;
+    }
+
+    &--after img {
+      right: 45%;
+    }
+  }
+}
+
+.changes__item--after {
+  @media (max-width: @mobile-width-only) {
+    display: none;
   }
 }

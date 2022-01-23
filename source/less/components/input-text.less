@@ -20,8 +20,85 @@
     padding-left: 15px;
     padding-top: 13px;
     padding-bottom: 14px;
+    padding-right: 16px;
     text-transform: uppercase;
     line-height: 18px;
     color: @dark-gray;
+    box-shadow: 0 0 0 1px @special-border;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    outline: none;
+    background-color: @base-white;
+
+    &:hover {
+      box-shadow: 0 0 1px @border-gray;
+    }
+
+    &:focus {
+      box-shadow: 0 0 1px transparent;
+      border-color: @dark-gray;
+    }
   }
 }
+
+.input-text--phone {
+  position: relative;
+
+  svg {
+    position: absolute;
+    fill: @special-gray;
+    left: 255px;
+    top: 13px;
+
+    @media (min-width: @tablet-width) {
+      left: 630px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 513px;
+    }
+  }
+}
+
+.input-text--email {
+  position: relative;
+
+  svg {
+    position: absolute;
+    stroke: @special-gray;
+    left: 255px;
+    top: 15px;
+
+    @media (min-width: @tablet-width) {
+      left: 630px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 513px;
+    }
+  }
+}
+
+.input-text input:required {
+  background-color: @base-white;
+}
+
+.input-text--email:focus {
+  svg {
+    stroke: @base-green;
+  }
+}
+
+.input-text--phone:focus {
+  svg {
+    fill: @base-green;
+  }
+}
+
+.input-text--email svg:active {
+  stroke: @base-green;
+}
+
+.input-text--phone svg:active {
+  fill: @base-green;
+} /*на попытки сделать error ругается*/

@@ -17,6 +17,14 @@
 }
 
 .page-footer__social {
+  @media (max-width: @mobile-width-only) {
+    padding-top: 25px;
+    width: 280px;
+    padding-bottom: 25px;
+    border-top: 1px solid @mobile-border;
+    border-bottom: 1px solid @mobile-border;
+  }
+
   @media (min-width: @tablet-width) {
     align-self: center;
   }

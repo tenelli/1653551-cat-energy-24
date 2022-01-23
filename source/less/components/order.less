@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 46px;
-  padding: 0; /*положила страницу в стандартный контейнер, пообнуляла паддинги филдсетам. Можно ли будет сделать у бэм-элементов маргины слева при подгонке планшетной версии по макету?*/
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 72px;
@@ -55,6 +55,34 @@
   margin-bottom: 45px;
   padding: 0;
 
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: @mobile-border;
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -22px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: @mobile-border;
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 152px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     border: 1px solid @special-border;
     box-sizing: border-box;
@@ -63,9 +91,10 @@
   }
 }
 
-.order__choice {
+.order__choice,
+.order__radio {
   display: block;
-  margin-bottom: 13px;
+  margin-bottom: 25px;
 }
 
 .order__comments {
@@ -102,10 +131,49 @@
 }
 
 .order__contacts-title {
-  margin-bottom: 35px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100vw;
+    background-color: @base-green;
+    top: 15px;
+    left: 46px;
+    transform: translateX(50%);
+
+    @media (min-width: @tablet-width) {
+      width: 800px;
+      left: 400px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 2000px; /*как лучше сделать эти полосы зелёные?*/
+      left: 500px;
+    }
+  }
+
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 35px;
+    width: 187px;
+    text-align: left;
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 76px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: @base-green;
+      top: 15px;
+      left: -371px;
+    }
   }
 }
 
@@ -199,5 +267,22 @@
     @media (min-width: @desktop-width) {
       margin-bottom: 0;
     }
+  }
+}
+
+
+.order__comment-title {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100vw;
+    background-color: @base-green;
+    top: 15px;
+    left: -6px;
+    transform: translateX(50%);
   }
 }

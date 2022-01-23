@@ -1,5 +1,6 @@
 .slider__switch {
-  border: none;
+  border-color: transparent;
+  box-sizing: border-box;
   background: none;
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
@@ -10,18 +11,98 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    border-bottom: 1px dotted @base-black;
+
+    &:hover {
+      border-bottom: 1px solid @base-black;
+    }
+
+    &:active {
+      border-color: transparent;
+    }
   }
 }
-
 
 .slider__toggle {
   display: flex;
   margin-left: 35px;
   margin-right: 35px;
   justify-content: space-between;
+  position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 86px;
+      height: 14px;
+      border: 1px solid @border-gray;
+      box-sizing: border-box;
+      border-radius: 6px;
+      background-color: @base-white;
+      top: 7px;
+      left: 60px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 36px;
+      height: 6px;
+      border-radius: 6px;
+      background-color: @base-green;
+      top: 11px;
+      left: 66px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     margin-left: 70px;
     margin-right: 70px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 426px;
+      height: 6px;
+      border-radius: 6px;
+      background-color: @mobile-border;
+      top: 15px;
+      left: 83px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: @base-green;
+      top: 2px;
+      left: 286px;
+      border: 13px solid @base-white;
+      box-shadow: 0 0 0 1px @border-gray;
+      cursor: pointer;
+    }
+
+    &:active::after {
+      box-shadow: 0 0 0 1px @base-green;
+    }
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.slider__toggle:hover .slider__switch {
+  border-bottom: 1px solid @base-black;
+}
+
+.slider__toggle:active .slider__switch {
+  border-color: transparent;
 }

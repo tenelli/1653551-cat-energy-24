@@ -1,8 +1,6 @@
 .button {
   display: block;
   border: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
   background-color: @base-green;
   text-transform: uppercase;
   color: @base-white;
@@ -11,10 +9,19 @@
   text-align: center;
   width: 280px;
   text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &:hover {
+    background-color: @dark-green;
+  }
+
+  &:active {
+    background-color: @dark-green;
+    color: @transparent-white;
+  }
 
   @media (min-width: @tablet-width) {
-    padding-top: 14px;
-    padding-bottom: 14px;
     font-size: 20px;
     line-height: 20px;
     width: 244px;
@@ -23,5 +30,22 @@
   &--silver {
     background-color: @base-gray;
     color: @dark-gray;
+
+    &:hover {
+      background-color: @another-border;
+    }
+
+    &:active {
+      background-color: @another-border;
+      color: @transparent-dark-gray;
+    }
+  }
+
+  &--additive {
+    @media (min-width: @tablet-width) {
+      text-align: center;
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
   }
 }

@@ -1,4 +1,45 @@
 .social__list {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.social__button {
+  display: block;
+  border-color: transparent;
+  box-sizing: border-box;
+  outline: none;
+  margin-right: 38px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 28px;
+  }
+}
+
+.social__button--vk svg,
+.social__button--instagram svg {
+  margin: auto;
+  fill: @icon-gray;
+}
+
+.social__button--facebook svg {
+  margin: auto;
+  stroke: @icon-gray;
+}
+
+.social__button--vk:hover svg,
+.social__button--instagram:hover svg {
+  fill: @base-green;
+}
+
+.social__button--facebook:hover svg {
+  stroke: @base-green;
+}
+
+.social__svg:active { /*тут пока не срабатывает*/
+  fill: @opacity-green;
+}
+
+.social__facebook:active { /*тут пока не срабатывает*/
+  stroke: @opacity-green;
 }

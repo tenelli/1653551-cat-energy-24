@@ -9,6 +9,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .htmlacademy__name {
@@ -20,4 +24,12 @@
   @media (min-width: @tablet-width) {
     margin-right: 22px;
   }
+}
+
+.htmlacademy__logo {
+  fill: @icon-gray;
+}
+
+.htmlacademy__logo:hover {
+  fill: @base-green;
 }

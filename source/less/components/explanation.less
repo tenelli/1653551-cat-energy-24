@@ -12,28 +12,27 @@
 }
 
 .explanation__description {
-  margin-bottom: 26px;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: @dark-gray;
+  margin-left: 80px;
 
   @media (min-width: @tablet-width) {
-    width: 230px;
+    width: 250px;
     font-size: 16px;
     line-height: 24px;
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 201px;
+    margin-top: 111px;
+    margin-left: 0;
   }
 }
 
 .explanation__list {
+  counter-reset: orderedlist;
+
   @media (min-width: @tablet-width) {
     display: grid;
     margin: 0;
-    margin-right: 79px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     column-gap: 137px;
@@ -41,7 +40,84 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 78px;
+  }
+}
+
+.explanation__item {
+  position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 134px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: @base-green;
+    width: 60px;
+    height: 60px;
+
+    @media (min-width: @tablet-width) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.explanation__leaf::before {
+  background-image: url("../img/leaf.svg");
+  background-repeat: no-repeat;
+  background-size: 25px 28px;
+  background-position: center;
+}
+
+.explanation__boil::before {
+  background-image: url("../img/boil.svg");
+  background-repeat: no-repeat;
+  background-size: 29px 31px;
+  background-position: center;
+}
+
+.explanation__eat::before {
+  background-image: url("../img/eat.svg");
+  background-repeat: no-repeat;
+  background-size: 25px 30px;
+  background-position: center;
+}
+
+.explanation__alarm::before {
+  background-image: url("../img/alarm.svg");
+  background-repeat: no-repeat;
+  background-size: 25px 29px;
+  background-position: center;
+}
+
+.explanation__list li::after {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    z-index: -1;
+    counter-increment: orderedlist;
+    content: counter(orderedlist);
+    font-family: "Oswald", sans-serif;
+    font-size: 280px;
+    line-height: 280px;
+    top: -40px;
+    left: 120px;
+    color: @base-gray;
   }
 }

@@ -1,11 +1,16 @@
-.choice {
+.radio {
   position: relative;
 }
 
-.choice__label {
+.radio__input {
+  appearance: none;
+  position: absolute;
+}
+
+.radio__label {
   text-transform: uppercase;
   color: @special-gray;
-  padding-left: 46px;
+  padding-left: 45px;
 
   @media (min-width: @tablet-width) {
     padding-left: 59px;
@@ -16,53 +21,51 @@
     display: block;
     width: 30px;
     height: 30px;
-    border: 1px solid @border-gray;
+    border: 1px solid #cdcdcd;
     box-sizing: border-box;
+    border-radius: 50%;
     position: absolute;
-    top: 0;
+    top: -3px;
     left: 0;
     z-index: 1;
 
     @media (min-width: @tablet-width) {
       width: 40px;
       height: 40px;
-      top: -10px;
+      top: -8px;
     }
   }
 
   &::after {
     content: "";
     display: block;
-    width: 26px;
-    height: 26px;
-    background: url("../img/tick.svg") no-repeat;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: @base-green;
     position: absolute;
-    top: 0;
-    left: 2px;
+    top: 5px;
+    left: 8px;
     z-index: 2;
     opacity: 0;
 
     @media (min-width: @tablet-width) {
-      left: 6px;
-      top: -2px;
+      width: 18px;
+      height: 18px;
+      top: 3px;
+      left: 11px;
     }
   }
 }
 
-.choice__input {
-  position: absolute;
-  appearance: none;
-}
-
-.choice__input:checked + .choice__label::after {
+.radio__input:checked + .radio__label::after {
   opacity: 1;
 }
 
-.choice__label:hover::before {
-  border-color: @border-hover;
+.radio__input:disabled + .radio__label {
+  opacity: 0.3;
 }
 
-
-.choice__input:disabled + .choice__label {
-  opacity: 0.3;
+.radio__label:hover::before {
+  border-color: @border-hover;
 }

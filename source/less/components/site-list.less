@@ -2,10 +2,19 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    z-index: 2;
   }
 }
 
 .site-list__item {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &:not(:first-of-type) {
     @media (min-width: @desktop-width) {
       margin-left: 36px;
@@ -14,8 +23,6 @@
 
   a {
     display: block;
-    padding-top: 22px;
-    padding-bottom: 24px;
     font-size: 20px;
     line-height: 20px;
     font-weight: 500;
@@ -25,6 +32,8 @@
 
     @media (max-width: @mobile-width-only) {
       border-top: 1px solid @nav-border;
+      padding-top: 22px;
+      padding-bottom: 24px;
     }
 
     @media (min-width: @tablet-width) {
@@ -37,5 +46,39 @@
       font-size: 20px;
       line-height: 30px;
     }
+  }
+
+  &--index a {
+    @media (min-width: @desktop-width) {
+      color: @base-white;
+    }
+  }
+}
+
+.site-list__current {
+  @media (min-width: @tablet-width) {
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    border-bottom: 2px solid @base-green;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 8px;
+  }
+
+  &--index {
+    @media (min-width: @desktop-width) {
+      border-color: @base-white;
+    }
+  }
+}
+
+.main-nav__list--index {
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: @base-white;
   }
 }
