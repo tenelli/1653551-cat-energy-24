@@ -1,0 +1,128 @@
+.tagline {
+  background-image: url("../img/index_green_cat.jpg");
+  background-repeat: no-repeat;
+  min-width: 320px;
+  min-height: 302px;
+  background-size: 100%;
+  padding-top: 27px;
+  background-position: top center;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
+}
+
+.tagline__header {
+  color: @base-white;
+  text-align: center;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    color: @base-black;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    margin-left: 87px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 92px;
+    margin-top: 43px;
+    margin-bottom: 42px;
+  }
+}
+
+
+.tagline__text {
+  color: @base-white;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 302px;
+
+  @media (min-width: @tablet-width) {
+    color: @base-black;
+    text-align: left;
+    margin-left: 88px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 540px;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @base-black;
+    text-align: left;
+    margin-left: 92px;
+    font-size: 20px;
+    line-height: 20px;
+    padding-bottom: 291px;
+    margin-bottom: 0;
+  }
+}
+
+.tagline__link {
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+
+  @media (min-width: @tablet-width) {
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+    margin-left: 87px;
+    top: 268px;
+    left: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 315px;
+    left: 85px;
+  }
+}
+
+
+.tagline__container {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 80px;
+  }
+}
+
+.tagline__image {
+  position: absolute;
+  top: 140px;
+
+  @media (max-width: @mobile-width-only) {
+    z-index: 1;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 644px;
+    height: 609px;
+    top: 239px;
+    left: 101px;
+  }
+
+  @media (min-width: @desktop-width) {
+    z-index: 2;
+    width: 525px;
+    height: 500px;
+    top: 2px;
+    left: 570px;
+  }
+}

@@ -7,28 +7,39 @@
     margin-right: 12px;
     color: @dark-gray;
     align-self: center;
+    margin-left: -1px;
 
     @media (min-width: @tablet-width) {
       font-size: 20px;
       line-height: 30px;
+      margin-right: 16px;
     }
   }
 
   input {
     flex-grow: 1;
-    margin-right: 20px;
-    padding-left: 15px;
+    padding-left: 13px;
     padding-top: 13px;
-    padding-bottom: 14px;
-    padding-right: 16px;
+    padding-bottom: 12px;
     text-transform: uppercase;
     line-height: 18px;
     color: @dark-gray;
     box-shadow: 0 0 0 1px @special-border;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     box-sizing: border-box;
     outline: none;
     background-color: @base-white;
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 2px;
+      padding-top: 9px;
+      padding-bottom: 10px;
+      padding-left: 18px;
+    }
 
     &:hover {
       box-shadow: 0 0 1px @border-gray;
@@ -37,6 +48,11 @@
     &:focus {
       box-shadow: 0 0 1px transparent;
       border-color: @dark-gray;
+    }
+
+    &--error:focus {
+      box-shadow: 0 0 1px transparent;
+      border-color: @error-red;
     }
   }
 }
@@ -47,15 +63,17 @@
   svg {
     position: absolute;
     fill: @special-gray;
-    left: 255px;
+    left: 244px;
     top: 13px;
 
     @media (min-width: @tablet-width) {
-      left: 630px;
+      left: 594px;
+      top: 16px;
     }
 
     @media (min-width: @desktop-width) {
-      left: 513px;
+      left: 534px;
+      top: 15px;
     }
   }
 }
@@ -63,18 +81,30 @@
 .input-text--email {
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    span {
+      margin-right: 20px;
+    }
+
+    input {
+      padding-left: 20px;
+    }
+  }
+
   svg {
     position: absolute;
     stroke: @special-gray;
-    left: 255px;
+    left: 244px;
     top: 15px;
 
     @media (min-width: @tablet-width) {
-      left: 630px;
+      left: 592px;
+      top: 19px;
     }
 
     @media (min-width: @desktop-width) {
-      left: 513px;
+      left: 533px;
+      top: 18px;
     }
   }
 }
