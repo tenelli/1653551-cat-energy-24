@@ -1,31 +1,14 @@
-.main-nav__picture,
-.main-nav__text-picture {
+.main-nav__image {
+  display: block;
+
   @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.main-nav__logo-tablet {
-  @media (max-width: @mobile-width-only) {
-    display: none;
-  }
-
-  @media (min-width: @tablet-width) { /*размер почему-то меньше*/
-    display: block;
-    min-width: 174px;
-    min-height: 52px;
+    width: 174px;
+    height: 52px;
   }
 
   @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.main-nav__logo-desktop {
-  display: none;
-
-  @media (min-width: @desktop-width) {
-    display: block;
+    width: 202px;
+    height: 59px;
   }
 }
 

@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cat Energy, функциональное питание для котов</title>
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
@@ -12,10 +16,11 @@
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__moving">
           <a class="main-nav__logo-link">
-            <img class="main-nav__picture" src="img/logo-mobile.svg" width="33" height="38" alt="Иконка Cat Energy в виде жизнерадостного неизвестного зверя">
-            <img class="main-nav__text-picture" src="img/text-logo.svg" width="101" height="18" alt="Текстовый логотип Cat Energy">
-            <img class="main-nav__logo-tablet" src="img/logo-tablet.svg" width="174" height="52">
-            <img class="main-nav__logo-desktop" src="img/logo-desktop.svg" width="202" height="59">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="main-nav__image" src="img/logo-mobile.svg" width="191" height="38" alt="Иконка Cat Energy в виде жизнерадостного неизвестного зверя и вышеозначенного названия">
+            </picture>
           </a>
           <p class="main-nav__button">
             <button class="main-nav__toggle" type="button">
@@ -40,7 +45,11 @@
       <div class="tagline__container container">
         <h1 class="tagline__header">Функциональное<br> питание для котов</h1>
         <p class="tagline__text">Занялся собой? Займись котом!</p>
-        <img class="tagline__image" src="img/product_example.png" width="280" height="270" alt="Банка кошачьего питания со вкусом курицы">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/product-example-desktop.png 1x, img/product-example-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/product-example-tablet.png 1x, img/product-example-tablet@2x.png 2x">
+          <img class="tagline__image" src="img/product-example-mobile.png" srcset="img/product-example-mobile@2x.png" width="280" height="270" alt="Банка кошачьего питания со вкусом курицы">
+        </picture>
         <a class="tagline__link button clear-underline" href="form.html">Подобрать программу</a>
       </div>
     </div>
@@ -116,10 +125,16 @@
                 <div class="changes__bg-wrapper">
                   <div class="changes__cat">
                     <div class="changes__item changes__item--before slider__item">
-                      <img src="img/before.png" alt="Изображение пухлого кота">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="img/before-tablet.png 1x, img/before-tablet@2x.png 2x">
+                        <img class="changes__image changes__image--before" src="img/before-mobile.png" width="280" height="232" srcset="img/before-mobile@2x.png" alt="Изображение пухлого кота">
+                      </picture>
                     </div>
                     <div class="changes__item changes__item--after slider__item">
-                      <img src="img/after.png" alt="Изображение похудевшего кота">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="img/after-tablet.png 1x, img/after-tablet@2x.png 2x">
+                        <img class="changes__image changes__image--after" src="img/after-mobile.png" width="280" height="232" srcset="img/after-mobile@2x.png" alt="Изображение похудевшего кота">
+                      </picture>
                     </div>
                   </div>
                   <div class="slider__toggle">
