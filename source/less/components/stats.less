@@ -1,17 +1,24 @@
 .stats__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  position: relative;
+  border: 1px solid @border-gray;
+  border-radius: 3px;
+  text-align: center;
+  width: 124px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 
   @media (min-width: @tablet-width) {
+    width: 160px;
     margin-right: 42px;
-    align-items: flex-start;
+    padding-top: 14px;
+    padding-bottom: 19px;
   }
 
   b {
     text-transform: uppercase;
     font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
 
     @media (min-width: @tablet-width) {
       font-size: 30px;
@@ -20,14 +27,31 @@
   }
 
   span {
+    background-color: @base-gray;
     font-family: "Arial", sans-serif;
     font-size: 12px;
     line-height: 12px;
     color: @dark-gray;
+    z-index: 2;
+    padding: 4px;
+    margin-left: -2px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 77px;
+    text-align: center;
+
 
     @media (min-width: @tablet-width) {
-      font-size: 24px;
-      line-height: 24px;
+      background: @base-white;
+      width: 140px;
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background: @base-gray;
     }
   }
 }
@@ -43,34 +67,53 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
-    width: 240px;
+    width: 180px;
     text-align: right;
-    margin-left: 167px;
+    margin-left: 120px;
+    margin-top: 25px;
+
+    span {
+      display: block;
+      margin-bottom: 10px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     text-align: left;
     margin-left: 0;
     width: 400px;
+
+    span {
+      display: inline-block;
+      margin-bottom: 0;
+      margin-right: 58px;
+      margin-left: -2px;
+    }
   }
 }
 
 .stats {
+  padding-top: 2px;
+
   @media (min-width: @tablet-width) {
     display: flex;
+    padding-bottom: 135px;
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    display: block;
+    padding-bottom: 0;
   }
 }
 
 .stats__changes {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 17px;
 
   @media (min-width: @desktop-width) {
     justify-content: flex-start;
+    margin-bottom: 44px;
+    margin-left: -2px;
   }
 }

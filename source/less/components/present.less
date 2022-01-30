@@ -1,15 +1,63 @@
-.present {
+.present__wrapper {
   background-color: @base-green;
   background-image: url("../img/catalog_green_cat.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: top center;
+  position: relative;
+  padding-top: 189px;
+  padding-bottom: 39px;
+  margin-bottom: 27px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/catalog_green_cat@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 73px;
+    padding-bottom: 68px;
+    margin-bottom: 64px;
+    background-position: center 61%;
+    background-size: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-size: cover;
+    background-position: center center;
+    width: 245px;
+    height: 289px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 78px;
+    height: 80px;
+    background-image: url("../img/present.svg");
+    background-repeat: no-repeat;
+    top: 60px;
+    left: 100px;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 82px;
+      top: 57px;
+      left: 80px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 52px;
+      left: 82px;
+    }
+  }
 }
 
 .present__description {
-  padding-top: 187px;
-  padding-bottom: 43px;
   width: 161px;
+  margin: 0;
+  padding: 0;
   margin-left: auto;
   margin-right: auto;
   font-family: "Arial", sans-serif;
@@ -17,4 +65,16 @@
   line-height: 20px;
   color: @base-white;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    margin-left: 422px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding-top: 185px;
+    text-align: center;
+    margin-left: 40px;
+  }
 }

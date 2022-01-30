@@ -1,5 +1,6 @@
 .invitation {
   background-color: @base-white;
+  position: relative;
 
   &--gray {
     background-color: @base-gray;
@@ -7,6 +8,8 @@
 
   @media (min-width: @desktop-width) {
     background: none;
+    padding-top: 95px;
+    padding-bottom: 107px;
   }
 }
 
@@ -16,30 +19,55 @@
     width: 100%;
     max-width: 100%;
   }
+
+  iframe {
+    border: none;
+    display: block;
+    width: 100%;
+
+    @media (min-width: @tablet-width) {
+      height: 400px;
+    }
+
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+  }
 }
 
 .invitation__main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 15px;
+  display: flex;
+  padding-top: 28px;
+  padding-bottom: 26px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
     justify-content: space-between;
+    padding-top: 58px;
+    padding-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   @media (min-width: @desktop-width) {
     width: 565px;
     box-sizing: border-box;
     padding: 60px 80px 56px 80px;
+    background-color: @base-white;
   }
 }
 
 .invitation__description {
+  margin: 0;
+  padding: 0;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
   color: @light-black;
+  width: 139px;
 
   @media (min-width: @tablet-width) {
     width: 170px;
@@ -53,11 +81,19 @@
   font-size: 14px;
   line-height: 20px;
   color: @dark-gray;
+  margin: 0;
+  padding: 0;
+  width: 139px;
 
-  @media (min-width: @tablet-width) { /*в этом тексте ещё по макету должна быть пустая строка*/
+  @media (min-width: @tablet-width) {
     font-size: 16px;
     width: 160px;
     text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    margin-right: -5px;
   }
 }
 
@@ -65,5 +101,12 @@
   @media (min-width: @tablet-width) {
     display: block;
     margin-top: 19px;
+  }
+}
+
+.invitation__container {
+  @media (min-width: @desktop-width) {
+    position: relative;
+    z-index: 2;
   }
 }

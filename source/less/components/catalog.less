@@ -1,4 +1,6 @@
 .catalog__title {
+  margin: 0;
+  padding: 0;
   margin-top: 27px;
   margin-bottom: 41px;
   font-weight: 400;
@@ -8,24 +10,84 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    margin-top: 64px;
+    margin-bottom: 163px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 80px;
   }
 }
 
 .catalog__special-card {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 25px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 30px;
+    background-color: @plus-color;
+    top: 42px;
+    left: 125px;
+
+    @media (min-width: @tablet-width) {
+      width: 60px;
+      top: 85px;
+      left: 130px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 89px;
+      top: 75px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 30px;
+    background-color: @plus-color;
+    top: 42px;
+    left: 125px;
+    transform: rotate(-90deg);
+
+    @media (min-width: @tablet-width) {
+      width: 60px;
+      top: 85px;
+      left: 130px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 89px;
+      top: 75px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     border: 2px solid @base-gray;
     box-sizing: border-box;
+    padding-top: 162px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 154px;
   }
 }
 
 .catalog__see-more {
-  margin-top: 78px;
   text-align: center;
   font-weight: 400;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
   color: @light-black;
+  margin: 0;
+  padding: 0;
+  margin-top: 1px;
   margin-bottom: 8px;
 
   @media (min-width: @tablet-width) {
@@ -45,6 +107,8 @@
   line-height: 16px;
   text-align: center;
   color: @dark-gray;
+  margin: 0;
+  padding: 0;
   margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
@@ -52,11 +116,32 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 86px;
+    font-size: 16px;
+    line-height: 18px;
   }
 }
 
 .catalog__button-all {
   text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100vw;
+      display: block;
+      height: 1px;
+      background-color: @another-border;
+      left: 50%;
+      top: 67px;
+      transform: translateX(-50%);
+    }
+  }
 
   @media (min-width: @tablet-width) {
     width: 248px;
@@ -71,29 +156,127 @@
 
 .catalog__item {
   @media (max-width: @mobile-width-only) {
-    border-top: 1px solid @another-border; /*в раздумьях, как это вменяемо растянуть на всю ширину*/
+    position: relative;
+
+    &:not(:last-of-type)::before {
+      position: absolute;
+      content: "";
+      width: 100vw;
+      display: block;
+      height: 1px;
+      background-color: @another-border;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:nth-last-child(2)::after {
+      position: absolute;
+      content: "";
+      width: 100vw;
+      display: block;
+      height: 1px;
+      background-color: @another-border;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 
 .catalog__goods {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 25px;
+  }
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
-    row-gap: 141px;
+    row-gap: 142px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
-    row-gap: 143px;
+    row-gap: 146px;
   }
 }
 
-.catalog-addpresent {
+.catalog__addpresent {
+  padding-bottom: 10px;
+
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 245px;
-    gap: 80px;
+    padding-bottom: 15px;
+  }
+}
+
+.catalog__addpresent-wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+.catalog__addpresent-title {
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 24px;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 12px;
+  margin-top: 1px;
+
+  span {
+    display: inline-block;
+    background-color: @base-white;
+    position: relative;
+    z-index: 2;
+    padding: 0 21px;
+    margin-left: -20px;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      top: 19px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 71px;
+    margin-bottom: 6px;
+
+    span {
+      display: inline-block;
+      background-color: @base-white;
+      position: relative;
+      z-index: 2;
+      padding: 0 33px;
+      margin-left: 1px;
+    }
+
+    &::before {
+      top: 23px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 73px;
+    margin-bottom: 82px;
+
+    span {
+      display: inline-block;
+      background-color: @base-white;
+      position: relative;
+      z-index: 2;
+      padding: 0 34px;
+      margin-left: -32px;
+    }
+
+    &::before {
+      top: 24px;
+    }
   }
 }
