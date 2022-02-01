@@ -10,6 +10,22 @@
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   height: 138px;
+  resize: none;
+
+  &:hover {
+    box-shadow: 0 0 0 1px @border-gray;
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: 0 0 0 1px @dark-gray;
+    border-color: @dark-gray;
+  }
+
+  &--error:focus {
+    box-shadow: 0 0 0 1px @error-red;
+    border-color: @error-red;
+  }
 
   @media (min-width: @tablet-width) {
     width: 600px;

@@ -18,12 +18,8 @@
     display: block;
     width: 100%;
     max-width: 100%;
-  }
-
-  iframe {
-    border: none;
-    display: block;
-    width: 100%;
+    z-index: 0;
+    height: 362px;
 
     @media (min-width: @tablet-width) {
       height: 400px;
@@ -35,6 +31,27 @@
       left: 0;
       top: 0;
       z-index: 1;
+    }
+  }
+
+  iframe {
+    border: none;
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 362px;
+    z-index: 2;
+
+    @media (min-width: @tablet-width) {
+      height: 400px;
+    }
+
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 2;
     }
   }
 }
@@ -107,6 +124,6 @@
 .invitation__container {
   @media (min-width: @desktop-width) {
     position: relative;
-    z-index: 2;
+    z-index: 3;
   }
 }
