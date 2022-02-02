@@ -78,6 +78,8 @@
     position: absolute;
     content: "";
     background-color: @base-green;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 60px;
     height: 60px;
     top: 0;
@@ -93,42 +95,6 @@
       height: 80px;
     }
   }
-}
-
-.explanation__leaf::before {
-  background-image: url("../img/leaf.svg");
-  background-repeat: no-repeat;
-  background-size: 25px 28px;
-  background-position: center;
-}
-
-.explanation__boil::before {
-  background-image: url("../img/boil.svg");
-  background-repeat: no-repeat;
-  background-size: 29px 31px;
-  background-position: center;
-}
-
-.explanation__eat::before {
-  background-image: url("../img/eat.svg");
-  background-repeat: no-repeat;
-  background-size: 25px 30px;
-  background-position: center;
-}
-
-.explanation__alarm br {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-  }
-}
-
-.explanation__alarm::before {
-  background-image: url("../img/alarm.svg");
-  background-repeat: no-repeat;
-  background-size: 25px 29px;
-  background-position: center;
 }
 
 .explanation__list li::after {
@@ -150,28 +116,63 @@
   }
 }
 
-/*Подгоняю поэлементно для пиксель перфекта*/
-.explanation__leaf {
+.explanation__item--leaf {
+  &::before {
+    background-image: url("../img/leaf.svg");
+    background-repeat: no-repeat;
+    background-size: 25px 28px;
+    background-position: center;
+  }
+
   @media (min-width: @desktop-width) {
     margin-left: -2px;
     margin-top: 2px;
   }
 }
 
-.explanation__boil {
+.explanation__item--boil {
+  &::before {
+    background-image: url("../img/boil.svg");
+    background-repeat: no-repeat;
+    background-size: 29px 31px;
+    background-position: center;
+  }
+
   @media (min-width: @desktop-width) {
     margin-left: 3px;
     margin-top: 2px;
   }
 }
 
-.explanation__eat {
+.explanation__item--eat {
+  &::before {
+    background-image: url("../img/eat.svg");
+    background-repeat: no-repeat;
+    background-size: 25px 30px;
+    background-position: center;
+  }
+
   @media (min-width: @desktop-width) {
     top: 2px;
   }
 }
 
-.explanation__alarm {
+.explanation__item--alarm {
+  &::before {
+    background-image: url("../img/alarm.svg");
+    background-repeat: no-repeat;
+    background-size: 25px 29px;
+    background-position: center;
+  }
+
+  br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     margin-right: -10px;
     top: 2px;

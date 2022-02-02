@@ -15,7 +15,7 @@ import browser from 'browser-sync';
 
 // Styles
 
-export const styles = () => {
+const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
@@ -28,11 +28,11 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
-
-// HTML
+//  HTML
 
 const html = () => {
   return gulp.src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
 
@@ -70,7 +70,7 @@ const createWebp = () => {
 // SVG
 
 const svg = () =>
-  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+  gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
@@ -90,13 +90,13 @@ const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
+    'source/manifest.webmanifest',
   ], {
     base: 'source'
   })
     .pipe(gulp.dest('build'))
   done();
 }
-
 
 // Clean
 
@@ -144,9 +144,9 @@ export const build = gulp.series(
     html,
     scripts,
     svg,
-    sprite,
     createWebp
   ),
+  sprite,
 );
 
 // Default
@@ -161,9 +161,9 @@ export default gulp.series(
     html,
     scripts,
     svg,
-    sprite,
     createWebp
   ),
+  sprite,
   gulp.series(
     server,
     watcher
