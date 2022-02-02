@@ -25,11 +25,16 @@
 .page-header--index {
   @media (min-width: @desktop-width) {
     width: 100%;
-    background: url("../img/index_green_cat_desktop.jpg") no-repeat right, linear-gradient(to right, @base-white 50%, @cat-green 50%);
+    background:
+      url("../img/index_green_cat_desktop.jpg") no-repeat right,
+      linear-gradient(to right, @base-white 50%, @cat-green 50%);
 
     @media (min-resolution: 2dppx) {
       width: 100%;
-      background: url("../img/index_green_cat_desktop@2x.jpg") 720px no-repeat right, linear-gradient(to right, @base-white 50%, @cat-green 50%);
+      background:
+        url("../img/index_green_cat_desktop@2x.jpg") no-repeat right,
+        linear-gradient(to right, @base-white 50%, @cat-green 50%);
+      background-size: 720px, auto;
     }
   }
 }
