@@ -87,13 +87,18 @@
 .input-text--email {
   position: relative;
 
+  input {
+    padding-right: 42px;
+
+    @media (min-width: @tablet-width) {
+      padding-right: 50px;
+      padding-left: 20px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     span {
       margin-right: 20px;
-    }
-
-    input {
-      padding-left: 20px;
     }
   }
 
