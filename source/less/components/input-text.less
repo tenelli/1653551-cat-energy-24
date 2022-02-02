@@ -29,7 +29,7 @@
     box-sizing: border-box;
     outline: none;
     background-color: @base-white;
-    font-family: "Oswald", sans-serif;
+    font-family: "Oswald", "Arial", sans-serif;
     font-size: 16px;
 
     @media (min-width: @tablet-width) {
@@ -46,11 +46,6 @@
     &:focus {
       box-shadow: 0 0 0 1px @dark-gray;
       border-color: @dark-gray;
-    }
-
-    &--error:focus {
-      box-shadow: 0 0 0 1px @error-red;
-      border-color: @error-red;
     }
   }
 }
@@ -125,22 +120,23 @@
   background-color: @base-white;
 }
 
-.input-text--email:focus {
-  svg {
-    stroke: @base-green;
-  }
-}
-
-.input-text--phone:focus {
-  svg {
-    fill: @base-green;
-  }
-}
-
-.input-text--email svg:active {
+.input-text--email input:focus + svg {
   stroke: @base-green;
 }
 
-.input-text--phone svg:active {
+.input-text--phone input:focus + svg {
   fill: @base-green;
+}
+
+.input-text .input-text__field--error {
+  box-shadow: 0 0 0 1px @error-red;
+  border-color: @error-red;
+}
+
+.input-text--email .input-text__field--error + svg {
+  stroke: @error-red;
+}
+
+.input-text--phone .input-text__field--error + svg {
+  fill: @error-red;
 }

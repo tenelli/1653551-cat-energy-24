@@ -55,15 +55,18 @@
               <legend class="visually-hidden">Данные питомца:</legend>
               <label class="input-text order__label" for="pet-name">
                 <span>Имя:*</span>
-                <input type="text" id="pet-name" name="pet-name" placeholder="Барсик" required>
+                <!--Для отображения состояния ошибки добавляется модификатор error-->
+                <input class="input-text__field"type="text" id="pet-name" name="pet-name" placeholder="Барсик" required>
               </label>
               <label class="input-text order__label" for="pet-weight">
                 <span>Вес (кг):*</span>
-                <input type="text" id="pet-weight" name="pet-weight" placeholder="7" required>
+                <!--Для отображения состояния ошибки добавляется модификатор error-->
+                <input class="input-text__field" type="text" id="pet-weight" name="pet-weight" placeholder="7" required>
               </label>
               <label class="input-text" for="pet-age">
                 <span>Возраст (лет):</span>
-                <input type="text" id="pet-age" name="pet-age" placeholder="7">
+                <!--Для отображения состояния ошибки добавляется модификатор error-->
+                <input class="input-text__field" type="text" id="pet-age" name="pet-age" placeholder="7">
               </label>
             </fieldset>
             <fieldset class="order__result">
@@ -89,14 +92,16 @@
             <div class="order__contacts-wrapper">
               <label class="input-text input-text--email order__contacts-label">
                 <span>E-mail:*</span>
-                <input type="email" name="e-mail" required placeholder="kuklachev@gmail.com">
+                <!--Для отображения состояния ошибки добавляется модификатор error-->
+                <input class="input-text__field" type="email" name="e-mail" required placeholder="kuklachev@gmail.com">
                 <svg class="input-text__svg" width="20" height="15">
                   <use xlink:href="img/sprite.svg#icon-email"></use>
                 </svg>
               </label>
               <label class="input-text input-text--phone order__contacts-label">
                 <span>Телефон:*</span>
-                <input type="tel" name="phone" required placeholder="8 (960) 900-60-90">
+                <!--Для отображения состояния ошибки добавляется модификатор error-->
+                <input class="input-text__field" type="tel" name="phone" required placeholder="8 (960) 900-60-90">
                 <svg class="input-text__svg" width="20" height="21">
                   <use xlink:href="img/sprite.svg#icon-phone"></use>
                 </svg>

@@ -3,7 +3,7 @@
   box-sizing: border-box;
   background: none;
   text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   cursor: pointer;
   font-size: 16px;
   line-height: 20px;
@@ -79,12 +79,16 @@
       top: -1px;
       left: 269px;
       border: 13px solid @base-white;
-      box-shadow: 0 0 0 1px @border-gray, 0 1px 3px @radio-shadow;
+      box-shadow: 0 0 0 1px @border-gray, 0 1px 3px @slider-shadow;
       cursor: pointer;
     }
 
+    &:hover::after {
+      box-shadow: 0 0 0 1px @border-gray, 0 2px 4px @active-shadow;
+    }
+
     &:active::after {
-      box-shadow: 0 0 0 1px @base-green;
+      box-shadow: 0 0 0 1px @base-green, 0 3px 5px @active-shadow;
     }
   }
 
@@ -96,10 +100,12 @@
   }
 }
 
-.slider__toggle:hover .slider__switch {
+.slider__switch--before:hover,
+.slider__switch--after:hover {
   border-bottom: 1px solid @opacity-black;
 }
 
-.slider__toggle:active .slider__switch {
+.slider__switch--before:active,
+.slider__switch--after:active {
   border-color: transparent;
 }
